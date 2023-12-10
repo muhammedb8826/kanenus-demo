@@ -5,10 +5,33 @@
 }
 
 nav {
+  position: relative;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   border: 1px solid red;
+  height: 70px;
+}
+
+.nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links.active {
+  display: block;
+  top: 70px;
+  width: 100%;
+  position: absolute;
+  list-style: none;
+  width: 50%;
+  border: 1px solid blue;
 }
