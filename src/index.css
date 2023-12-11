@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
 nav {
   position: relative;
   background-color: #fff;
@@ -11,7 +16,6 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid red;
   height: 70px;
 }
 
@@ -29,9 +33,96 @@ nav {
 .nav-links.active {
   display: block;
   top: 70px;
+  left: 0;
   width: 100%;
   position: absolute;
   list-style: none;
-  width: 50%;
-  border: 1px solid blue;
+  background-color: #fff;
+  padding: 0 1rem;
 }
+
+.nav-links li:not(:first-child) {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 1em;
+}
+
+.nav-links li .collapsible {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+.collapsible-items {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.collapsible-items.close{
+  display: none;
+}
+
+.collapsible-items li {
+  font-size: 0.8em;
+  line-height: 1;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0 1em;
+}
+
+.nav-links li:not(:last-child) a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+
+.login {
+  width: 100%;
+  display: flex;
+  background-color: #2C73df;
+  ;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+form {
+  position: relative;
+}
+
+.search-input {
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+.search-btn {
+  position: absolute;
+  top: 1em;
+  font-size: 1em;
+  right: 1em;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
