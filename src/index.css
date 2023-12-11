@@ -44,8 +44,10 @@ nav {
 
 .nav-links li:not(:first-child) {
   width: 100%;
-  margin: 1rem 0;
-  padding: 0 1em;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  background-color: #EFEFEF;
+  border-radius: 5px;
 }
 
 .nav-links li .collapsible {
@@ -57,7 +59,6 @@ nav {
   cursor: pointer;
   border: none;
   font-size: 1em;
-  background-color: transparent;
 }
 
 .collapsible-items {
@@ -76,7 +77,7 @@ nav {
   line-height: 1;
   width: 100%;
   margin: 0.5rem 0;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 .nav-links li:not(:last-child) a {
