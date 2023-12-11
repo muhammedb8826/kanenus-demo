@@ -3,8 +3,7 @@ import logoImage from '../assets/logo.png'
 import { CgClose, CgMenuRight } from "react-icons/cg";
 import { LiaSearchSolid } from "react-icons/lia";
 import { useState } from "react";
-import { IoChevronDownSharp } from "react-icons/io5";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(true)
@@ -27,35 +26,35 @@ const NavBar = () => {
 
       <ul className={`nav-links ${toggle? "": "active"} `}>
         <li>
-          <from>
+          <form>
             <input type="text" placeholder="Search" className="search-input" />
             <button className="search-btn">
             <LiaSearchSolid />
             </button>
-          </from>
+          </form>
         </li>
         <li>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/">
             Home
           </NavLink>
         </li>
         <li>
           <button onClick={()=>setCollapseBureau(prev=>!prev)} className="collapsible">
-             <span>About Bureau</span> <span><IoIosArrowUp /></span> 
+             <span>About Bureau</span> <span>{collapseBureau?<IoIosArrowUp />: <IoIosArrowDown />}</span> 
           </button>
           <ul className={`collapsible-items ${collapseBureau ? "": "close"} `}>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact" >
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact" >
                 Our Structure
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact" >
                 Our Departments
               </NavLink>
             </li>
@@ -78,16 +77,16 @@ const NavBar = () => {
         </li>
         <li>
         <button onClick={()=>setCollapseAnnouncement(prev=>!prev)} className="collapsible">
-             <span>Announcements</span> <span><IoIosArrowUp /></span> 
+             <span>Announcements</span> <span>{collapseAnnouncement?<IoIosArrowUp />: <IoIosArrowDown />}</span> 
           </button>
           <ul className={`collapsible-items ${collapseAnnouncement ? "": "close"} `}>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact" >
                 Vacancies
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact">
                 Bids
               </NavLink>
             </li>

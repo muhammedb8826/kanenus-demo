@@ -39,6 +39,7 @@ nav {
   list-style: none;
   background-color: #fff;
   padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links li:not(:first-child) {
@@ -123,6 +124,44 @@ form {
   align-items: center;
 }
 
+.hero-section {
+  background-color: #2C73df;
+  color: #fff;
+  text-align: center;
+}
 
+.hero-section img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
+.about-us {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
 
+.about-us h1{
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+
+.about-description img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about-description {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .about-description img {
+    width: 50%;
+  }
+
+}
